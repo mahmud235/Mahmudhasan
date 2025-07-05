@@ -16,7 +16,7 @@ I am **Mahmud Hasan**, a self-taught developer passionate about building clean a
 
 ## 🚀 Live Website
 
-👉 [https://mahmu235.github.io/rafik](https://mahmud235.github.io/mahmudhasan)
+👉 [https://mahmud235.github.io/mahmudhasan](https://mahmud235.github.io/mahmudhasan)
 
 ---
 

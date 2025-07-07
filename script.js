@@ -1,19 +1,11 @@
 function login() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const sound = document.getElementById("login-sound");
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
 
-  if (email === "mahmudhasan6595@gmail.com" && password === "123456") {
-    sound.play();
-    setTimeout(() => {
-      window.location.href = "profile.html";
-    }, 500); // delay for sound
+  if (email && password) {
+    // Allow any input for now
+    window.location.href = "home.html";  // Redirect to real site
   } else {
-    alert("Incorrect login credentials!");
+    alert("Please enter both email and password.");
   }
-}
-
-function togglePassword() {
-  const pass = document.getElementById("password");
-  pass.type = pass.type === "password" ? "text" : "password";
 }

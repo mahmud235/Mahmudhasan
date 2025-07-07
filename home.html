@@ -37,3 +37,50 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I am Mahmud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <img src="IMG_20250625_160242.jpg" class="profile-pic" alt="Mahmud">
+      <h1>I am <span class="highlight">Mahmud Hasan</span></h1>
+      <p><a href="https://instagram.com/mahmud.hasan_08" target="_blank">@mahmud.hasan_08</a></p>
+    </div>
+  </header>  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Gmail</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#lang">Language</a></li>
+    </ul>
+  </nav>  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am Mahmud Hasan, welcome to my personal space on the internet. Scroll down to explore more!</p>
+  </section>  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="IMG_20250625_160242.jpg" alt="Mahmud Pic 1">
+      <img src="IMG_20250625_160242.jpg" alt="Mahmud Pic 2">
+      <img src="IMG_20250625_160242.jpg" alt="Mahmud Pic 3">
+    </div>
+  </section>  <section id="lang">
+    <h2>Choose Language</h2>
+    <button onclick="changeLang('en')">English</button>
+    <button onclick="changeLang('hi')">हिंदी</button>
+  </section>  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="email" id="fromEmail" placeholder="Your Gmail">
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>  <footer>
+    <p>&copy; 2025 Mahmud Hasan | Gmail: <strong>mahmudhasan6595@gmail.com</strong></p>
+  </footer>  <script src="script.js"></script></body>
+    </html>

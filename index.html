@@ -2,18 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - Mahmud Hasan</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahmud Hasan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: 0.3s;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: var(--bg-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .menu {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-btn {
+      padding: 5px 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: #eee;
+    }
+
+    .section {
+      padding: 100px 20px 50px;
+      min-height: 100vh;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .section img {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00000044;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: var(--bg-color);
+    }
+  </style>
 </head>
-<body class="login-body">
-  <div class="login-container">
-    <h2>🔐 Login</h2>
-    <input type="email" id="email" placeholder="Enter Gmail" />
-    <input type="password" id="password" placeholder="Enter Password" />
-    <button onclick="login()">Login</button>
+<body>
+  <header>
+    <div class="menu">☰</div>
+    <div class="toggle-container">
+      <button onclick="toggleLang()" class="lang-btn" id="langBtn">EN</button>
+      <button onclick="toggleDarkMode()" class="lang-btn">🌓</button>
+    </div>
+  </header>
+
+  <div class="section" id="scroll-section">
+    <h2 id="sectionTitle">🎯 मेरा लक्ष्य / My Goal</h2>
+    <img src="IMG_20250625_160242.jpg" alt="Goal Photo" />
   </div>
 
-  <script src="script.js"></script>
+  <div class="section">
+    <h2 id="sectionOptions">⚙️ विकल्प / Options</h2>
+    <ul>
+      <li>📧 Email: mahmudhasan6595@gmail.com</li>
+      <li>📷 Instagram: <a href="https://instagram.com/mahmud.hasan_08" target="_blank">@mahmud.hasan_08</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    © 2025 Mahmud Hasan
+  </footer>
+
+  <script>
+    let lang = "en";
+    function toggleLang() {
+      lang = lang === "en" ? "hi" : "en";
+      document.getElementById('langBtn').innerText = lang === "en" ? "EN" : "HI";
+      document.getElementById('sectionTitle').innerText = lang === "en" ? "🎯 My Goal" : "🎯 मेरा लक्ष्य";
+      document.getElementById('sectionOptions').innerText = lang === "en" ? "⚙️ Options" : "⚙️ विकल्प";
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>

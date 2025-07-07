@@ -127,3 +127,138 @@
     <p>&copy; 2025 Mahmud Hasan | Gmail: <strong>mahmudhasan6595@gmail.com</strong></p>
   </footer>  <script src="script.js"></script></body>
   </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahmud Hasan Universe 🌌</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('https://media.giphy.com/media/3o6ZsXXD7bB9WwEEn2/giphy.gif') repeat;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px white;
+    }
+
+    .switch {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    section {
+      padding: 40px 20px;
+      animation: slideIn 1s ease;
+    }
+
+    .card {
+      background: #1a1a2e;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .time {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <div class="switch">
+    <button onclick="toggleTheme()">🌗 Theme</button>
+    <button onclick="toggleMusic()">🎵 Music</button>
+  </div>
+
+  <section class="hero">
+    <img src="IMG_20250625_160242.jpg" alt="Mahmud">
+    <h1>I am Mahmud Hasan</h1>
+    <p><a href="https://instagram.com/mahmud.hasan_08" target="_blank">@mahmud.hasan_08</a></p>
+    <div class="time" id="time"></div>
+  </section>
+
+  <section>
+    <div class="card"><h2>📂 My Skills</h2><p>HTML, CSS, JavaScript, Python</p></div>
+    <div class="card"><h2>🎮 Hobbies</h2><p>Gaming, Coding, Music</p></div>
+    <div class="card"><h2>🛡️ Admin Only</h2><p>To change Gmail info, you need Admin access.</p></div>
+  </section>
+
+  <section id="contact">
+    <h2>📧 Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="email" id="fromEmail" placeholder="Your Gmail" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Mahmud Hasan | Gmail: mahmudhasan6595@gmail.com</p>
+  </footer>
+
+  <audio id="bg-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById('bg-music');
+      if (music.paused) music.play();
+      else music.pause();
+    }
+
+    function sendMessage(e) {
+      e.preventDefault();
+      alert(\"Message Sent (Demo only)\");
+    }
+
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('time').textContent = now.toLocaleString();
+    }
+
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+        </html>

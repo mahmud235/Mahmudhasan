@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+.login-body, .profile-body {
+  background: linear-gradient(135deg, #000000, #1a1a2e);
+  min-height: 100vh;
+  color: #fff;
+  transition: background 2s;
+}
+
+.login-container, .profile-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+input {
+  width: 85%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+.password-wrapper span {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+button {
+  padding: 12px 25px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+button:hover {
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid white;
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+.cloud-bg {
+  background: url('https://i.ibb.co/rdTQ5bg/clouds.gif') repeat-x;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  animation: moveClouds 60s linear infinite;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+@keyframes moveClouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+    }

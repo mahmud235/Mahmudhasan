@@ -9,17 +9,11 @@
 <body class="login-body">
   <div class="login-container">
     <h2>🔐 Login</h2>
-    <input type="email" id="email" placeholder="Enter Gmail" />
-    
-    <div class="password-wrapper">
-      <input type="password" id="password" placeholder="Enter Password" />
-      <span onclick="togglePassword()">👁️</span>
-    </div>
-    
+    <input type="email" id="email" placeholder="Enter Gmail" required />
+    <input type="password" id="password" placeholder="Enter Password" required />
     <button onclick="login()">Login</button>
   </div>
 
-  <audio id="login-sound" src="login.mp3"></audio>
   <script src="script.js"></script>
 </body>
-                            </html>
+</html>

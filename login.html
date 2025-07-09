@@ -2,17 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Mahmud Hasan</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      text-align: center;
+      width: 90%;
+      max-width: 350px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background-color: #eee;
+      color: #333;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      background: #00b894;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #019874;
+    }
+  </style>
 </head>
-<body class="login-body">
+<body>
   <div class="login-container">
     <h2>🔐 Login</h2>
-    <input type="email" id="email" placeholder="Enter Gmail" />
-    <input type="password" id="password" placeholder="Enter Password" />
+    <input type="email" id="email" placeholder="Enter Gmail" required />
+    <input type="password" id="password" placeholder="Enter Password" required />
     <button onclick="login()">Login</button>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (email && password) {
+        // In real case, you should check credentials from a database/server
+        alert("Login successful!");
+        window.location.href = "home.html"; // redirect after login
+      } else {
+        alert("Please enter both Gmail and Password.");
+      }
+    }
+  </script>
 </body>
 </html>
